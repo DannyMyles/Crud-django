@@ -5,13 +5,24 @@
         <td> Full Name</td>
         <td> Mobile</td>
         <td> Stack</td>
+        <td> <a href="{%url 'student_insert'%}" class="btn btn-outline-success"><i class="fas fa-plus"></i>Add New</a></td>
     </thead>
     <tbody>
         {% for student in students students_list%}
         <tr>{{student.fullname}}</tr>
         <tr>{{student.mobile}}</tr>
         <tr>{{student.stack}}</tr>
-
+        <td>
+            <a href="{% url 'student_update' student.id %}" class="btn text-secondary px-0">
+                <i class="far far edit fa-lg"></i>
+            </a>
+            <form action="{%url 'student_delete',student.id}"method="post" class="d-inline">
+                {%csrf_token%}
+                <button type="submit" class="btn">
+                    <i class="fas fa-trash-alt fa-lg text danger float-right"></i>
+                </button>
+            </form>
+        </td>
         {% endfor %}
     </tbody>
 </table>
