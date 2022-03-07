@@ -5,4 +5,10 @@ from .models import Student
 class StudentForm(forms.ModelForm):
     class Meta :
         model = Student
-        fields='__all__'
+        fields=('fullname','mobile','students_code','sd','stack')
+        lebels={
+            'fullname':'Full Name',
+            'students_code':"Student,s Code",
+            'mobile':'Mobile No.',
+            'sd':'SD.'
+        }
