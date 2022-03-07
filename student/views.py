@@ -1,9 +1,11 @@
 from django.shortcuts import render,redirect
 from .forms import StudentForm
+from .models import Student
 # Create your views here.
 
 def students_list(request):
-    return render(request, 'student/student_list.html')
+    context = {'students_list':Student.objects.all()}
+    return render(request, 'student/student_list.html',context)
 
 def students_form(request):
     if request.method =='GET':
