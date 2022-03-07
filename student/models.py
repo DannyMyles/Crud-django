@@ -13,3 +13,4 @@ class Student(models.Model):
     mobile=models.CharField(max_length=15)
     sd=models.CharField(max_length=10)
     stack=models.ForeignKey(Position, on_delete=models.CASCADE)
+

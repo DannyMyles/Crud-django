@@ -10,7 +10,6 @@ class StudentForm(forms.ModelForm):
             'fullname':'Full Name',
             'students_code':"Student's Code",
             'mobile':'Mobile No.',
-            'sd':'SD.'
         }
 
 
