@@ -8,7 +8,7 @@
         <td> <a href="{%url 'student_insert'%}" class="btn btn-outline-success"><i class="fas fa-plus"></i>Add New</a></td>
     </thead>
     <tbody>
-        {% for student in students students_list%}
+        {% for student in students_list%}
         <tr>{{student.fullname}}</tr>
         <tr>{{student.mobile}}</tr>
         <tr>{{student.stack}}</tr>

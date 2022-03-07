@@ -8,7 +8,7 @@ class StudentForm(forms.ModelForm):
         fields=('fullname','mobile','students_code','sd','stack')
         lebels={
             'fullname':'Full Name',
-            'students_code':"Student,s Code",
+            'students_code':"Student's Code",
             'mobile':'Mobile No.',
             'sd':'SD.'
         }
