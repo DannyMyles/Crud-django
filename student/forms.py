@@ -12,3 +12,9 @@ class StudentForm(forms.ModelForm):
             'mobile':'Mobile No.',
             'sd':'SD.'
         }
+
+
+def __init__(self, *args, **kwargs):
+    super(StudentForm, self).__init__(*args, **kwargs)
+    self.fields['stack'].empty_lebel = "Select"
+    self.fields['students_code'].required=False

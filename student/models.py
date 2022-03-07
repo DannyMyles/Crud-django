@@ -4,6 +4,8 @@ from django.db import models
 class Position(models.Model):
     stack=models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.stack
 
 class Student(models.Model):
     fullname=models.CharField(max_length=100)
